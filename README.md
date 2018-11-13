@@ -1,4 +1,4 @@
-# Japanese Address Deconstructor
+# Japanese Address Deconstructor API
 
 Splits Japanese addresses into several components such as follows:
 
