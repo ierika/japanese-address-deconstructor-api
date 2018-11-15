@@ -82,7 +82,7 @@ class AddressParser:
         return self.get_output_components()
 
     def get_output_components(self):
-        """Outputs cleaned address components into a dictionary"""
+        """Output cleaned address components into a dictionary"""
         return {
             "postal_code": self.postal_code,
             "prefecture": self.prefecture,
@@ -94,7 +94,7 @@ class AddressParser:
         }
 
     def get_clean_address(self):
-        """Concatenate ouput components into one string"""
+        """Concatenate output components into a string"""
         return " ".join(
             [x for x in self.get_output_components().values() if x is not None]
         )
