@@ -40,10 +40,13 @@ class AddressParser:
         value = value.replace("−", "-")
 
         # Get postal code and strip
-        post_code_match = re.search(r"\d{3}-?\d{4}", value)
+        post_code_match = re.search(r"(\d{3})-?(\d{4})", value)
         if post_code_match:
-            self.postal_code = post_code_match.group(0)
-            value = value.replace(self.postal_code, "")
+            self.postal_code = "{}-{}".format(
+                post_code_match.group(1),
+                post_code_match.group(2),
+            )
+            value = value.replace(post_code_match.group(0), "")
 
         # Get prefecture and strip
         def get_prefecture(x):
