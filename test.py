@@ -3,7 +3,7 @@ from parser.address_parser import AddressParser
 
 if __name__ == "__main__":
     deconstructed = AddressParser(
-        "227-0042 神奈川県川崎市麻生区上麻生１−３４−５ 川崎西合同庁舎 １２３号室"
+            "121-9932北海道札幌市手稲区曙11条2丁目3番12号buiidididi123f"
     )
-    print(deconstructed.parse())
-    print(deconstructed.get_clean_address())
+    print(deconstructed.input_address)
+    print(deconstructed.get_output_components())

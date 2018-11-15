@@ -68,6 +68,22 @@ KANA_MARU_MAP = (
 )
 
 
+KANJI_NUMERALS = {
+    "一": "1",
+    "二": "2",
+    "三": "3",
+    "四": "4",
+    "五": "5",
+    "六": "6",
+    "七": "7",
+    "八": "8",
+    "九": "9",
+    "○": "0",
+    "百": "100",
+    "十": "10",
+}
+
+
 ascii_zh_table = {}
 ascii_hz_table = {}
 kana_zh_table = {}
@@ -171,3 +187,8 @@ def han2zen(text, ascii_=True, digit=True, kana=True, kakko=True, ignore=()):
             result.append(c)
 
     return "".join(result)
+
+
+def kan2num(kanji: str) -> str or None:
+    """Converts Kanji numerals to alphanumeric"""
+    return KANJI_NUMERALS.get(kanji, None)
