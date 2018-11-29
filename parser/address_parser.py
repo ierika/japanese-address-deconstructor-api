@@ -23,7 +23,7 @@ class AddressParser:
         value = self.input_address
 
         # Convert Kanji numerals to digits
-        kanji_number_match = re.findall(r"[ー二三四五六七八九十〇]", value)
+        kanji_number_match = re.findall(r"[一二三四五六七八九十〇]", value)
         for match in kanji_number_match:
             value = value.replace(match, kan2num(match))
 
